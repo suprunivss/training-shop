@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/training-shop/static/js/main.47d14f04.js",
+    "main.js": "/training-shop/static/js/main.b2fed7c5.js",
     "index.html": "/training-shop/index.html",
-    "main.47d14f04.js.map": "/training-shop/static/js/main.47d14f04.js.map"
+    "main.b2fed7c5.js.map": "/training-shop/static/js/main.b2fed7c5.js.map"
   },
   "entrypoints": [
-    "static/js/main.47d14f04.js"
+    "static/js/main.b2fed7c5.js"
   ]
 }
