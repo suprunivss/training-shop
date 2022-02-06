@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/training-shop/static/js/main.e51ac70f.js",
+    "main.js": "/training-shop/static/js/main.fb4d9a76.js",
+    "static/media/sliderMain.jpg": "/training-shop/static/media/sliderMain.9ac01342d65ee17fa08d.jpg",
     "index.html": "/training-shop/index.html",
-    "main.e51ac70f.js.map": "/training-shop/static/js/main.e51ac70f.js.map"
+    "main.fb4d9a76.js.map": "/training-shop/static/js/main.fb4d9a76.js.map"
   },
   "entrypoints": [
-    "static/js/main.e51ac70f.js"
+    "static/js/main.fb4d9a76.js"
   ]
 }
