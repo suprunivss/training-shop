@@ -1,18 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
 import Bar from './Bar/Bar';
+import Navigation from './Navigation/Navigation';
+import styled from 'styled-components';
+import Menu from './Menu/Menu';
 
-const HeaderStyle = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const Style = styled.div`
+  height: 90px;
+  border-bottom: 2px solid #f8f8f8;
 `
 
 const Header = () => {
   return (
-    <HeaderStyle>
+    <Style>
       <Bar/>
-    </HeaderStyle>
+      <Navigation/>
+      <Menu/>
+    </Style>
   );
 };
 

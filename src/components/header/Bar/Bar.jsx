@@ -11,6 +11,7 @@ const Style = styled.div`
 const Container = styled.div`
   height: 24px;
   margin: 0 auto;
+  padding: 0 15px;
   max-width: 1140px;
   display: flex;
   justify-content: space-between;
@@ -22,7 +23,6 @@ const Bar = () => {
     <Style>
       <Container>
         <Contact/>
-
         <Social/>
       </Container>
     </Style>
