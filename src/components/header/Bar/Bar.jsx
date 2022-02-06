@@ -22,6 +22,7 @@ const Bar = () => {
     <Style>
       <Container>
         <BarContact/>
+
         <BarSocial/>
       </Container>
     </Style>
