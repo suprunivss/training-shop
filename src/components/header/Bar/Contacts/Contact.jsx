@@ -20,7 +20,7 @@ const Svg = styled.svg`
   margin-right: 8px;
 `;
 
-const BarContact = () => {
+const Contact = () => {
   return (
     <Style>
       <Svg width="12" height="12" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
@@ -58,4 +58,4 @@ const BarContact = () => {
   );
 };
 
-export default BarContact;
+export default Contact;

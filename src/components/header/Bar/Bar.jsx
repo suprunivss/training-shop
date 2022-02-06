@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import BarContact from './BarContact/BarContact';
-import BarSocial from './BarSocial/BarSocial';
+import Contact from './Contacts/Contact';
+import Social from './Social/Social';
 
 const Style = styled.div`
   background: #000000;
@@ -21,9 +21,9 @@ const Bar = () => {
   return (
     <Style>
       <Container>
-        <BarContact/>
+        <Contact/>
 
-        <BarSocial/>
+        <Social/>
       </Container>
     </Style>
   );

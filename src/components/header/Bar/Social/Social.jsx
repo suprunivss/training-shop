@@ -18,7 +18,7 @@ const A = styled.a`
   }
 `
 
-const BarSocial = () => {
+const Social = () => {
   return (
     <Style>
       <A href="">
@@ -55,4 +55,4 @@ const BarSocial = () => {
   );
 };
 
-export default BarSocial;
+export default Social;
