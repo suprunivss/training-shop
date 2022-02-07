@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MenuSlider from './MenuSlider/MenuSlider';
+import MenuPreview from './MenuPreview/MenuPreview';
 
 const Section = styled.section`
   max-width: 1140px;
@@ -16,7 +17,7 @@ const Menu = () => {
   return (
     <Section>
       <MenuSlider/>
-      <MenuSlider/>
+      <MenuPreview/>
     </Section>
   );
 };
