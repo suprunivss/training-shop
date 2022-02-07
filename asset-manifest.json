@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.js": "/training-shop/static/js/main.e2bb4995.js",
+    "main.js": "/training-shop/static/js/main.779101da.js",
     "static/media/sliderMain.jpg": "/training-shop/static/media/sliderMain.9ac01342d65ee17fa08d.jpg",
+    "static/media/acessories.jpg": "/training-shop/static/media/acessories.a2d042de25b220ec4b1b.jpg",
+    "static/media/womensPreview.jpg": "/training-shop/static/media/womensPreview.82526178318589cfb22d.jpg",
+    "static/media/mensPreview.jpg": "/training-shop/static/media/mensPreview.44f6b821b65a8ce1f765.jpg",
     "index.html": "/training-shop/index.html",
-    "main.e2bb4995.js.map": "/training-shop/static/js/main.e2bb4995.js.map"
+    "main.779101da.js.map": "/training-shop/static/js/main.779101da.js.map"
   },
   "entrypoints": [
-    "static/js/main.e2bb4995.js"
+    "static/js/main.779101da.js"
   ]
 }
