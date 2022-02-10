@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-export const Wrapper = styled.div.attrs(props => props.img)`
+export const Wrapper = styled.article.attrs(props => props.img)`
   width: 100%;
   height: 100%;
   display: flex;
