@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import menuSliderImage from '../../../assets/img/sliderMain.jpg';
 
+export const PreviewSection = styled.section`
+  margin-top: 32px;
+`;
+
 export const Wrapper = styled.div`
   display: flex;
-  margin: 32px auto 0;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   gap: 30px;

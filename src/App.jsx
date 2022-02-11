@@ -3,6 +3,7 @@ import 'normalize.css';
 import Header from './components/molecules/Header/Header';
 import Divider from './components/atoms/Divider/Divider';
 import Home from './pages/Home/Home';
+import Cart from './components/molecules/Cart/Cart';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Home/>
       </main>
       <Divider/>
+      <Cart/>
+      <Cart/>
     </>
   );
 }
