@@ -7,7 +7,7 @@ export const Wrapper = styled.article.attrs(props => props.img)`
   align-items: center;
   justify-content: center;
   background-size: cover;
-  background-image: url(${props => props.img});
+  background-image: url(${ props => props.img });
 `;
 
 const toMaxWidth = keyframes`
@@ -15,13 +15,13 @@ const toMaxWidth = keyframes`
     width: 50%;
     max-width: max-content;
   }
-  1%{
+  1% {
     max-width: none;
   }
   100% {
     width: 100%;
   }
-`
+`;
 
 const toMinWidth = keyframes`
   0% {
@@ -30,7 +30,7 @@ const toMinWidth = keyframes`
   100% {
     width: 50%;
   }
-`
+`;
 
 export const PreviewLink = styled.a`
   background: #ffffff;
@@ -41,11 +41,11 @@ export const PreviewLink = styled.a`
   justify-content: center;
   border: none;
   cursor: pointer;
-  animation: ${toMinWidth} 0.3s linear 1 forwards;
+  animation: ${ toMinWidth } 0.3s linear 1 forwards;
 
   &:hover {
     border-radius: 0;
-    animation: ${toMaxWidth} 0.3s linear 1 forwards;
+    animation: ${ toMaxWidth } 0.3s linear 1 forwards;
   }
 
   :active {

@@ -1,9 +1,9 @@
 import { ContainerStyled } from './styles';
 
-const Container = ({children}) => {
+const Container = ({ children }) => {
   return (
     <ContainerStyled>
-      {children}
+      { children }
     </ContainerStyled>
   );
 };

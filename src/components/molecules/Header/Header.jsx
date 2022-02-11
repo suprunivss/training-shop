@@ -9,8 +9,7 @@ const Header = () => {
       <Navigation/>
       <Divider/>
     </header>
-  )
-    ;
+  );
 };
 
 export default Header;

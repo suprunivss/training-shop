@@ -9,4 +9,4 @@ export const typographyTypes = {
   bodyBold: 'bodyBold',
   small: 'small',
   button: 'button',
-}
+};

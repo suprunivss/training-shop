@@ -1,10 +1,10 @@
+import Social from '../../../atoms/Social/Social';
+import LabelWithIcon from '../../../atoms/LabelWithIcon/LabelWithIcon';
+
 import phone from '../../../../assets/svg/phone.svg';
 import location from '../../../../assets/svg/location-marker.svg';
 import clock from '../../../../assets/svg/clock.svg';
 import { BarWrapper, Container, FlexContainer } from './styles';
-
-import Social from '../../../atoms/Social/Social';
-import LabelWithIcon from '../../../atoms/LabelWithIcon/LabelWithIcon';
 
 const Bar = () => {
   return (
