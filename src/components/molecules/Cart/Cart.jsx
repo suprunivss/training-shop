@@ -13,9 +13,8 @@ import {
   CartSize,
   CartSizeButton,
   CartTitle,
-  CartWrapper, ButtonContainer,
+  CartWrapper, ButtonContainer, CartPriceLineThrough, CartInfoWrapper, CartSale,
 } from './styles';
-import image from '../../../assets/img/Rectangle 1.png';
 import grey from '../../../assets/img/grey.png';
 import black from '../../../assets/img/black.png';
 import blue from '../../../assets/img/blue.png';
@@ -23,20 +22,40 @@ import white from '../../../assets/img/white.png';
 import heart from '../../../assets/svg/heart.svg';
 import scale from '../../../assets/svg/scale.svg';
 
-const Cart = () => {
+const Cart = ({ items }) => {
   return (
     <CartWrapper>
       <CartImage>
-        <img src={ image } alt=""/>
+        <img src={ items.image } alt=""/>
+        { items.sale
+          ? <CartSale>
+              <Typography type={typographyTypes.bodyBold} Tag='span' color='#ffffff'>
+                -{ items.sale }%
+              </Typography>
+            </CartSale>
+          : null
+        }
       </CartImage>
       <CartItemWrapper>
         <CartItem>
           <CartTitle>
-            Women's tracksuit Q109
+            { items.text }
           </CartTitle>
           <CartInfo>
-            <Typography type={ typographyTypes.bodyBold } Tag="span">$ 30.00</Typography>
-            <RatingStars rating="4"/>
+            { items.sale
+              ? <CartInfoWrapper>
+                <Typography type={ typographyTypes.bodyBold } Tag="span">
+                  $ { (items.price * items.sale / 100).toFixed(2) }
+                </Typography>
+                <CartPriceLineThrough>
+                  <Typography type={ typographyTypes.small } Tag="span" color="rgba(18,18,18,0.4)">
+                    $ { items.price.toFixed(2) }
+                  </Typography>
+                </CartPriceLineThrough>
+              </CartInfoWrapper>
+              : <Typography type={ typographyTypes.bodyBold } Tag="span">$ { items.price.toFixed(2) }</Typography>
+            }
+            <RatingStars rating={ items.rating }/>
           </CartInfo>
           <CartColor>
             <CartColorButton>
@@ -69,10 +88,10 @@ const Cart = () => {
           <CartButtonsWrapper>
             <AddToCart/>
             <ButtonContainer>
-              <img src={heart} alt=""/>
+              <img src={ heart } alt=""/>
             </ButtonContainer>
             <ButtonContainer>
-              <img src={scale} alt=""/>
+              <img src={ scale } alt=""/>
             </ButtonContainer>
           </CartButtonsWrapper>
         </CartItem>

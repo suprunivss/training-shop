@@ -1,11 +1,11 @@
-import { AddToCartWrapper } from './styles';
-import Typography from '../Typography/Typography';
-import { typographyTypes } from '../Typography/constants';
+import { AddToCartText, AddToCartWrapper } from './styles';
 
 const AddToCart = () => {
   return (
     <AddToCartWrapper>
-      <Typography type={typographyTypes.small} Tag='span' color='rgba(255, 255, 255, 0.9)'>ADD TO CART</Typography>
+      <AddToCartText>
+        ADD TO CART
+      </AddToCartText>
     </AddToCartWrapper>
   );
 };

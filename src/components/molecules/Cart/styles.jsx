@@ -47,6 +47,13 @@ export const CartInfo = styled.div`
   justify-content: space-between;
 `;
 
+export const CartInfoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(18, 18, 18, 0.4);
+`;
+
 export const CartColor = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -97,4 +104,19 @@ export const ButtonContainer = styled.button`
   width: 40px;
   background-color: #ffffff;
   cursor: pointer;
+`;
+
+export const CartPriceLineThrough = styled.p`
+  text-decoration: line-through;
+`;
+
+export const CartSale = styled.div`
+  position: absolute;
+  top: 0;
+  width: 53px;
+  height: 31px;
+  background-color: #E91E63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
