@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CartItemWrapper = styled.div`
+export const ItemWrapper = styled.div`
   width: 255px;
   height: 212px;
   position: absolute;
@@ -10,30 +10,30 @@ export const CartItemWrapper = styled.div`
   transform: translateY(0px);
 `;
 
-export const CartWrapper = styled.article`
+export const CardWrapper = styled.article`
   display: flex;
   position: relative;
   height: 378px;
   width: 255px;
   overflow: hidden;
 
-  :hover ${ CartItemWrapper } {
+  :hover ${ ItemWrapper } {
     transform: translateY(-155px);
   }
 `;
 
-export const CartImage = styled.div`
+export const Image = styled.div`
   background-size: cover;
   width: 255px;
   height: 318px;
 `;
 
-export const CartItem = styled.div`
+export const Item = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const CartTitle = styled.p`
+export const Title = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 15.68px;
@@ -41,20 +41,20 @@ export const CartTitle = styled.p`
   padding: 16px 0 11px 0;
 `;
 
-export const CartInfo = styled.div`
+export const Info = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const CartInfoWrapper = styled.div`
+export const InfoWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 4px;
   color: rgba(18, 18, 18, 0.4);
 `;
 
-export const CartColor = styled.div`
+export const Color = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -62,14 +62,14 @@ export const CartColor = styled.div`
   padding: 16px 0 12px 0;
 `;
 
-export const CartColorButton = styled.button`
+export const ColorButton = styled.button`
   border: none;
   cursor: pointer;
   width: 40px;
   height: 40px;
 `;
 
-export const CartSize = styled.div`
+export const Size = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -77,7 +77,7 @@ export const CartSize = styled.div`
   padding-bottom: 20px;
 `;
 
-export const CartSizeButton = styled.button`
+export const SizeButton = styled.button`
   width: 24px;
   height: 24px;
   display: flex;
@@ -88,7 +88,7 @@ export const CartSizeButton = styled.button`
   cursor: pointer;
 `;
 
-export const CartButtonsWrapper = styled.div`
+export const ButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -106,11 +106,11 @@ export const ButtonContainer = styled.button`
   cursor: pointer;
 `;
 
-export const CartPriceLineThrough = styled.p`
+export const PriceLineThrough = styled.p`
   text-decoration: line-through;
 `;
 
-export const CartSale = styled.div`
+export const Sale = styled.div`
   position: absolute;
   top: 0;
   width: 53px;

@@ -1,4 +1,4 @@
-import Cart from '../../../components/molecules/Cart/Cart';
+import CardProduct from '../../../components/molecules/CardProduct/CardProduct';
 import Container from '../../../components/atoms/Container/Container';
 import {
   CatalogButton,
@@ -40,12 +40,13 @@ const Catalog = ({ section, title }) => {
         <CatalogItems>
           { section.map(item => {
             return (
-              <Cart items={ item } key={ item.id }/>
+              <CardProduct price={ item.price } image={ item.image } text={ item.text } rating={ item.rating }
+                           sale={ item.sale } key={ item.id }/>
             );
           }) }
         </CatalogItems>
         <CatalogButton>
-          <Typography type={typographyTypes.button} Tag='span' color='rgba(18, 18, 18, 0.8)'>
+          <Typography type={ typographyTypes.button } Tag="span" color="rgba(18, 18, 18, 0.8)">
             SEE ALL
           </Typography>
         </CatalogButton>
