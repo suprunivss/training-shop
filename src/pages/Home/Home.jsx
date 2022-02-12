@@ -4,6 +4,7 @@ import Divider from '../../components/atoms/Divider/Divider';
 import Catalog from '../../pageComponents/home/Catalog/Catalog';
 import BD from '../../BD';
 import Offer from '../../pageComponents/home/Offer/Offer';
+import Subscribe from '../../pageComponents/home/Subscribe/Subscribe';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Catalog section={BD.women} title="WOMEN'S"/>
       <Catalog section={BD.men} title="MEN'S"/>
       <Offer/>
+      <Subscribe/>
     </>
   );
 };

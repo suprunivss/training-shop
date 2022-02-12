@@ -19,29 +19,27 @@ export const SubscribeContainer = styled.div`
   justify-content: center;
   background-color: #ffffff;
   position: relative;
-  
-  ::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 584px;
-    background-image: url(${subscribe1});
-    background-repeat: no-repeat;
-    top: -23px;
-    left: -260px;
-  }
-
-  ::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 524px;
-    background-image: url(${subscribe2});
-    background-repeat: no-repeat;
-    top: -20px;
-    left: 520px;
-  }
+  z-index: 1;
 `;
+
+export const ImageContainerLeft = styled.div`
+  background-image: url(${subscribe1});
+  background-repeat: no-repeat;
+  width: 311px;
+  height: 584px;
+  margin-right: -50px;
+  margin-bottom: -72px;
+  z-index: 2;
+`
+
+export const ImageContainerRight = styled.div`
+  background-image: url(${subscribe2});
+  width: 219px;
+  height: 524px;
+  margin-left: -15px;
+  margin-bottom: -30px;
+  z-index: 2;
+`
 
 export const SubscribeContent = styled.div`
   display: flex;
