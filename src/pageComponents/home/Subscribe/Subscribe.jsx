@@ -1,6 +1,5 @@
 import {
   ImageContainerLeft, ImageContainerRight,
-  SubscribeButton,
   SubscribeContainer,
   SubscribeContent,
   SubscribeEmail,
@@ -9,6 +8,7 @@ import {
 } from './styles';
 import Typography from '../../../components/atoms/Typography/Typography';
 import { typographyTypes } from '../../../components/atoms/Typography/constants';
+import ButtonDark from '../../../components/atoms/ButtonDark/ButtonDark';
 
 const Subscribe = () => {
   return (
@@ -28,9 +28,9 @@ const Subscribe = () => {
               <Typography type={ typographyTypes.title_26 } Tag="span" color="#E91E63"> GET 10% OFF</Typography>
             </Typography>
             <SubscribeEmail/>
-            <SubscribeButton>
+            <ButtonDark width='342px' height='66px'>
               SUBSCRIBE
-            </SubscribeButton>
+            </ButtonDark>
           </SubscribeTitle>
         </SubscribeContent>
       </SubscribeContainer>

@@ -1,7 +1,7 @@
 import Typography from '../../atoms/Typography/Typography';
 import { typographyTypes } from '../../atoms/Typography/constants';
 import RatingStars from '../../atoms/RatingStars/RatingStars';
-import AddToCart from '../../atoms/AddToCart/AddToCart';
+import ButtonDark from '../../atoms/ButtonDark/ButtonDark';
 
 import {
   ButtonsWrapper,
@@ -86,7 +86,11 @@ const CardProduct = ({ price, image, text, rating, sale }) => {
             </SizeButton>
           </Size>
           <ButtonsWrapper>
-            <AddToCart/>
+            <ButtonDark width='145px' height='40px'>
+              <Typography type={typographyTypes.button} Tag='span' color='#ffffff'>
+                ADD TO CART
+              </Typography>
+            </ButtonDark>
             <ButtonContainer>
               <img src={ heart } alt=""/>
             </ButtonContainer>
