@@ -5,6 +5,7 @@ import Catalog from '../../pageComponents/home/Catalog/Catalog';
 import BD from '../../BD';
 import Offer from '../../pageComponents/home/Offer/Offer';
 import Subscribe from '../../pageComponents/home/Subscribe/Subscribe';
+import Blog from '../../pageComponents/home/Blog/Blog';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Catalog section={BD.men} title="MEN'S"/>
       <Offer/>
       <Subscribe/>
+      <Blog/>
     </>
   );
 };

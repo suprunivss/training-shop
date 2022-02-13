@@ -26,7 +26,7 @@ const CardProduct = ({ price, image, text, rating, sale }) => {
   return (
     <CardWrapper>
       <Image>
-        <img src={ image } alt=""/>
+        <img src={ image } alt={image}/>
         { sale
           ? <Sale>
             <Typography type={ typographyTypes.bodyBold } Tag="span" color="#ffffff">
