@@ -7,6 +7,10 @@ export const Wrapper = styled.section`
   flex-direction: column;
   padding: 96px 0;
   gap: 48px;
+
+  @media (max-width: 992px) {
+    padding: 40px 0;
+  }
 `;
 
 export const Content = styled.div`

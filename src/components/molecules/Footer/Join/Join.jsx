@@ -1,4 +1,4 @@
-import { Content, Email,  SubscribeEmail, Wrapper } from './styles';
+import { Content, Email, SubscribeEmail, Text, Wrapper } from './styles';
 import Container from '../../../atoms/Container/Container';
 import Typography from '../../../atoms/Typography/Typography';
 import { typographyTypes } from '../../../atoms/Typography/constants';
@@ -10,9 +10,11 @@ const Join = () => {
     <Wrapper>
       <Container>
         <Content>
-          <Typography type={ typographyTypes.subtitle } Tag="span" color="#ffffff">
-            BE IN TOUCH WITH US:
-          </Typography>
+          <Text>
+            <Typography type={ typographyTypes.subtitle } Tag="span" color="#ffffff">
+              BE IN TOUCH WITH US:
+            </Typography>
+          </Text>
           <Email>
             <SubscribeEmail/>
             <ButtonDark width='108px' height='32px'>

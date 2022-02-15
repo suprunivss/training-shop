@@ -7,7 +7,7 @@ import {
   NavigationLink,
   NavigationItem,
   NavigationList,
-  ShoppingCart,
+  ShoppingCart, Burger,
 } from './styles';
 import search from '../../../../assets/svg/search.svg';
 import globe from '../../../../assets/svg/globe.svg';
@@ -31,6 +31,9 @@ const Navigation = () => {
               </NavigationItem>
             )) }
           </NavigationList>
+          <Burger>
+
+          </Burger>
         </nav>
         <ButtonGroup>
           <ButtonWithIcon>

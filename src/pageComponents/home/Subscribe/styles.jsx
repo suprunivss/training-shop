@@ -30,6 +30,10 @@ export const ImageContainerLeft = styled.div`
   margin-right: -50px;
   margin-bottom: -72px;
   z-index: 2;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 `
 
 export const ImageContainerRight = styled.div`
@@ -39,6 +43,10 @@ export const ImageContainerRight = styled.div`
   margin-left: -15px;
   margin-bottom: -30px;
   z-index: 2;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 `
 
 export const SubscribeContent = styled.div`

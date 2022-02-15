@@ -29,4 +29,4 @@ export const Link = styled.a`
 export const Image = styled.img`
   width: 14px;
   height: 14px;
-`
+`;

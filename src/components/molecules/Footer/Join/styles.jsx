@@ -20,6 +20,12 @@ export const Email = styled.div`
   gap: 12px;
 `;
 
+export const Text = styled.div`
+  @media (max-width: 992px) {
+    display: none;
+  }
+`
+
 export const SubscribeEmail = styled.input.attrs({
   type: 'email',
   placeholder: 'Enter your email',
@@ -33,4 +39,8 @@ export const SubscribeEmail = styled.input.attrs({
   text-align: center;
   border: none;
   color: #ffffff;
+
+  @media (max-width: 992px) {
+    width: 200px;
+  }
 `;

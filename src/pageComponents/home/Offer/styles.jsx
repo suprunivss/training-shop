@@ -26,6 +26,10 @@ export const OfferContainer = styled.div`
   background-size: cover;
   height: 260px;
   width: 540px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 export const OfferText = styled.div`

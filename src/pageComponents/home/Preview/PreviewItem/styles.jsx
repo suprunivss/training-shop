@@ -13,8 +13,14 @@ export const PreviewImage = styled.img`
   margin-right: 13px;
 `;
 
-export const PreviewText = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 10px;
 `;
+
+export const Text = styled.div`
+  @media (max-width: 992px) {
+    display: none;
+  }
+`

@@ -14,7 +14,43 @@ export const NavigationList = styled.ul`
   justify-content: space-between;
   gap: 25px;
   text-decoration: none;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
+
+export const Burger = styled.span`
+  display: none;
+
+  @media (max-width: 992px) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #121212;
+    
+    
+    
+    ::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 2px;
+      background-color: #121212;
+      top: 10px;
+    }
+
+    ::after {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 2px;
+      background-color: #121212;
+      top: -10px;
+    }
+  }
+`
 
 export const NavigationItem = styled.li`
   list-style: none;

@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 export const SliderWrapper = styled.article`
@@ -22,6 +26,10 @@ export const SliderWrapper = styled.article`
   height: 490px;
   background-image: url(${ menuSliderImage });
   background-size: cover;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 export const SliderStyle = styled.div`
@@ -58,6 +66,10 @@ export const PreviewWrapper = styled.div`
   flex-wrap: wrap;
   gap: 30px;
   flex-grow: 1;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 export const WrapperInfo = styled.div`

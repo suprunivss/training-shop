@@ -4,17 +4,29 @@ export const CatalogWrapper = styled.section`
   margin-top: 96px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 992px) {
+    margin-top: 50px;
+  }
 `;
 
 export const CatalogTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
 `;
 
 export const CatalogTitleNav = styled.nav`
   display: flex;
   gap: 32px;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 export const CatalogTitleButton = styled.button`
@@ -29,11 +41,10 @@ export const CatalogItems = styled.div`
   gap: 30px;
   padding: 50px 0;
 
-
-  @media(max-width: 1200px) {
-    align-items: center;
+  @media (max-width: 1200px) {
     justify-content: center;
   }
+  
 `;
 
 export const CatalogButton = styled.button`
