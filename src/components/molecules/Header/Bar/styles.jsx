@@ -3,7 +3,7 @@ import { ContainerStyled } from '../../../atoms/Container/styles';
 
 export const BarWrapper = styled.div`
   background: #000000;
-  width: 100vw;
+  width: 100%;
   color: #ffffff;
 `
 export const Container = styled(ContainerStyled)`

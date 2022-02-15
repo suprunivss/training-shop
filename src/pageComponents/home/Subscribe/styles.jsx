@@ -4,7 +4,7 @@ import subscribe2 from '../../../assets/img/subscribe2.png'
 
 export const SubscribeWrapper = styled.section`
   height: 580px;
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(180deg, #F3F2F2 0%, #DCDBDB 100%);
   display: flex;
   align-items: center;
