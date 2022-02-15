@@ -6,6 +6,10 @@ export const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const List = styled.ul`

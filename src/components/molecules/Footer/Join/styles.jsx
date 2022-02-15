@@ -12,19 +12,24 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`
+`;
 
 export const Email = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
+  justify-content: space-between;
+
+  @media (max-width: 720px) {
+    gap: 52px;
+  }
 `;
 
 export const Text = styled.div`
   @media (max-width: 992px) {
     display: none;
   }
-`
+`;
 
 export const SubscribeEmail = styled.input.attrs({
   type: 'email',

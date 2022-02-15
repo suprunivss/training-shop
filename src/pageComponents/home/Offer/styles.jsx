@@ -4,6 +4,10 @@ export const OfferSection = styled.section`
   display: flex;
   gap: 30px;
   padding: 96px 0;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const OfferWrapper = styled.div`

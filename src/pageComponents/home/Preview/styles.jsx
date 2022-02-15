@@ -3,6 +3,10 @@ import menuSliderImage from '../../../assets/img/sliderMain.jpg';
 
 export const PreviewSection = styled.section`
   margin-top: 32px;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const Wrapper = styled.div`

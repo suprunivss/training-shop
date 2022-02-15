@@ -5,6 +5,10 @@ export const SocialWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const SocialLink = styled.a`

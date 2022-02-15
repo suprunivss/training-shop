@@ -14,6 +14,12 @@ export const List = styled.ul`
   gap: 20px;
 `;
 
+export const Title = styled.div`
+  @media (max-width: 720px) {
+    display: none;
+  }
+`
+
 export const Item = styled.li`
   list-style: none;
 `;
