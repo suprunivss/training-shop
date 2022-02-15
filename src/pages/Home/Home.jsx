@@ -6,6 +6,7 @@ import BD from '../../BD';
 import Offer from '../../pageComponents/home/Offer/Offer';
 import Subscribe from '../../pageComponents/home/Subscribe/Subscribe';
 import Blog from '../../pageComponents/home/Blog/Blog';
+import Footer from '../../components/molecules/Footer/Footer';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Offer/>
       <Subscribe/>
       <Blog/>
+      <Footer/>
     </>
   );
 };
