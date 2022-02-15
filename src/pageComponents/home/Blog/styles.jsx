@@ -7,17 +7,29 @@ export const Wrapper = styled.section`
   flex-direction: column;
   padding: 96px 0;
   gap: 48px;
-`
+`;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 48px;
-`
+`;
 
 export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`
+`;
+
+export const TitleContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+`;
 

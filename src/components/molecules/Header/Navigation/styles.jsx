@@ -5,7 +5,9 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 `;
+
 export const NavigationList = styled.ul`
   display: flex;
   align-items: center;
@@ -28,11 +30,16 @@ export const NavigationLink = styled.a`
     color: #9C9C9C;
   }
 `;
+
 export const Logo = styled.p`
   font-family: 'Playfair Display SC', serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
+
+  @media(max-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const ButtonGroup = styled.div`

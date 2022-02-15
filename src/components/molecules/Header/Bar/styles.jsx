@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { ContainerStyled } from '../../../atoms/Container/styles';
 
-export const BarWrapper = styled.div`
+export const WrapperBackground = styled.div`
   background: #000000;
   width: 100%;
   color: #ffffff;
+  margin: 0;
 `
-export const Container = styled(ContainerStyled)`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

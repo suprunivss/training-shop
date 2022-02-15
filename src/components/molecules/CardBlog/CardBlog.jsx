@@ -1,11 +1,11 @@
-import { CardWrapper, Image, Info, ItemWrapper, Text } from './styles';
+import { CardWrapper, Image, Info,  Text } from './styles';
 import Typography from '../../atoms/Typography/Typography';
 import { typographyTypes } from '../../atoms/Typography/constants';
 
 const CardBlog = ({ image, title, text, date }) => {
   return (
     <CardWrapper>
-      <ItemWrapper>
+      <div>
         <Image>
           <img src={ image } alt={ image }/>
         </Image>
@@ -17,7 +17,7 @@ const CardBlog = ({ image, title, text, date }) => {
             <Typography type={typographyTypes.subtitle} Tag='p'>READ MORE</Typography>
           </Info>
         </Text>
-      </ItemWrapper>
+      </div>
     </CardWrapper>
   );
 };

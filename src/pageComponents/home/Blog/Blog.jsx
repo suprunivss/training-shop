@@ -1,4 +1,4 @@
-import { Content, Title, Wrapper } from './styles';
+import { Content, Title, TitleContent, Wrapper } from './styles';
 import Container from '../../../components/atoms/Container/Container';
 import Typography from '../../../components/atoms/Typography/Typography';
 import { typographyTypes } from '../../../components/atoms/Typography/constants';
@@ -16,7 +16,7 @@ const Blog = () => {
             <Typography type={ typographyTypes.title_22 } Tag="span">LATEST FROM BLOG</Typography>
             <Typography type={ typographyTypes.subtitle } Tag="span" color="rgba(18, 18, 18, 0.6)">SEE ALL</Typography>
           </Title>
-          <Title>
+          <TitleContent>
             <CardBlog image={ blog1 }
                       title="THE EASIEST WAY TO BREAK"
                       text="But I must explain to you how all this mistaken idea of denouncing pleas and praising pain was bor"
@@ -32,7 +32,7 @@ const Blog = () => {
                       text="But I must explain to you how all this mistaken idea of denouncing pleas and praising pain was bor"
                       date="April 6, 2032"
             />
-          </Title>
+          </TitleContent>
         </Content>
       </Container>
     </Wrapper>
