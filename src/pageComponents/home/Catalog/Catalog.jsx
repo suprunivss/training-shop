@@ -11,7 +11,7 @@ import {
 import Typography from '../../../components/atoms/Typography/Typography';
 import { typographyTypes } from '../../../components/atoms/Typography/constants';
 
-const Catalog = ({ section, title }) => {
+const Catalog = ({ section, title, link }) => {
   return (
     <CatalogWrapper>
       <Container>
@@ -41,7 +41,7 @@ const Catalog = ({ section, title }) => {
           { section.map(item => {
             return (
               <CardProduct price={ item.price } image={ item.image } text={ item.text } rating={ item.rating }
-                           sale={ item.sale } key={ item.id }/>
+                           sale={ item.sale } key={ item.id } id={item.id} link={link}/>
             );
           }) }
         </CatalogItems>

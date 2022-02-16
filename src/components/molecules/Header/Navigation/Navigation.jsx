@@ -20,20 +20,18 @@ const Navigation = () => {
   return (
     <Container>
       <Wrapper>
-        <Logo>
+        <Burger/>
+        <Logo to='/' data-test-id='header-logo-link'>
           CleverShop
         </Logo>
-        <nav>
+        <nav data-test-id='menu'>
           <NavigationList>
             { links.map((item, index) => (
               <NavigationItem key={ index }>
-                <NavigationLink href={ item }>{ item }</NavigationLink>
+                <NavigationLink to={`/${item}`} data-test-id={`menu-link-${item}`}>{ item }</NavigationLink>
               </NavigationItem>
             )) }
           </NavigationList>
-          <Burger>
-
-          </Burger>
         </nav>
         <ButtonGroup>
           <ButtonWithIcon>

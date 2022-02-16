@@ -4,7 +4,7 @@ import Divider from '../../atoms/Divider/Divider';
 
 const Header = () => {
   return (
-    <header>
+    <header data-test-id='header'>
       <Bar/>
       <Navigation/>
       <Divider/>

@@ -5,7 +5,7 @@ import Copyright from './Copyright/Copyright';
 
 const Footer = () => {
   return (
-    <Wrapper>
+    <Wrapper data-test-id='footer'>
       <Join/>
       <Links/>
       <Copyright/>

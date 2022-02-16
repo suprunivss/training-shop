@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const ItemWrapper = styled.div`
   width: 255px;
@@ -22,7 +23,7 @@ export const CardWrapper = styled.article`
   }
 `;
 
-export const Image = styled.div`
+export const Image = styled(Link)`
   background-size: cover;
   width: 255px;
   height: 318px;

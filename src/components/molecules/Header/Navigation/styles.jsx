@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   height: 64px;
@@ -56,22 +57,24 @@ export const NavigationItem = styled.li`
   list-style: none;
 `;
 
-export const NavigationLink = styled.a`
+export const NavigationLink = styled(Link)`
   text-decoration: none;
   color: #000000;
   transition: 300ms;
   padding: 15px 7px;
 
-  &:hover {
+  :hover {
     color: #9C9C9C;
   }
 `;
 
-export const Logo = styled.p`
+export const Logo = styled(Link)`
   font-family: 'Playfair Display SC', serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
+  color: #121212;
+  text-decoration: none;
 
   @media(max-width: 1200px) {
     display: none;
@@ -91,7 +94,7 @@ export const ButtonWithIcon = styled.button`
   border: none;
   position: relative;
 
-  &:hover {
+  :hover {
     transform: scale(1.2);
     cursor: pointer;
   }

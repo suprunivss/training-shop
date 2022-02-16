@@ -22,10 +22,10 @@ import white from '../../../assets/img/white.png';
 import heart from '../../../assets/svg/heart.svg';
 import scale from '../../../assets/svg/scale.svg';
 
-const CardProduct = ({ price, image, text, rating, sale }) => {
+const CardProduct = ({ price, image, text, rating, sale, link, id }) => {
   return (
     <CardWrapper>
-      <Image>
+      <Image to={`/${ link }/${id}`}>
         <img src={ image } alt={image}/>
         { sale
           ? <Sale>

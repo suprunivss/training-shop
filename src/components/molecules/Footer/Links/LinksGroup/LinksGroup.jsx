@@ -14,7 +14,7 @@ const LinksGroup = ({ title, link }) => {
 
           return (
             <Item key={ index }>
-              <Link href={ items }>
+              <Link href={ items } data-test-id={`footer-nav-link-${items}`}>
                 <Typography type={typographyTypes.body} Tag='span' color='rgba(18, 18, 18, 0.7)'>
                   { item }
                 </Typography>
