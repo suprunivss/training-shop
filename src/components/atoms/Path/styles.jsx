@@ -26,11 +26,11 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 24px;
 `;
 
 export const TitleProduct = styled(Title)`
   padding: 6px 0;
+  flex-direction: column;
 `;
 
 export const TitleProductWrapper = styled.div`
@@ -87,9 +87,21 @@ export const Image = styled.img`
   width: 14px;
 `;
 
-export const Info = styled.div`
+export const InfoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 `;
 
+export const InfoRating = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+
+export const Info = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+`

@@ -1,15 +1,16 @@
 import {
   Arrow, ArrowInactive, Content,
-  ContentPath, Image, Info,
+  ContentPath, Image, InfoWrapper, InfoRating,
   PagesPath, Share,
   StyledLink,
   StyledLinkHome, StyledLinkInactive, Title, TitleProduct, TitleProductWrapper,
-  Wrapper,
+  Wrapper, Info
 } from './styles';
 import Container from '../Container/Container';
 import share from '../../../assets/svg/share.svg';
 import Typography from '../Typography/Typography';
 import { typographyTypes } from '../Typography/constants';
+import RatingStars from '../RatingStars/RatingStars';
 
 const Path = ({ link, title }) => {
   return (
@@ -22,9 +23,9 @@ const Path = ({ link, title }) => {
               { title
                 ?
                 <>
-                  <ArrowInactive></ArrowInactive>
+                  <ArrowInactive/>
                   <StyledLinkInactive to={ `/${ link }` }>{ link }</StyledLinkInactive>
-                  <Arrow></Arrow>
+                  <Arrow/>
                   <StyledLink to={ `/${ link }/${ title }` }>{ title }</StyledLink>
                 </>
                 :
@@ -46,10 +47,23 @@ const Path = ({ link, title }) => {
                 <Typography type={ typographyTypes.title_26 } Tag="h2">
                   { title }
                 </Typography>
-                <Info>
-
-                </Info>
               </TitleProductWrapper>
+              <InfoWrapper>
+                <InfoRating>
+                  <RatingStars rating="4"/>
+                  <Typography type={ typographyTypes.small } Tag="span" color="rgba(18, 18, 18, 0.6)">
+                    2 Reviews
+                  </Typography>
+                </InfoRating>
+                <Info>
+                  <Typography type={ typographyTypes.small } Tag="span" color="rgba(18, 18, 18, 0.6)">
+                    SKU: <Typography type={typographyTypes.bodyBold} Tag="span">777</Typography>
+                  </Typography>
+                  <Typography type={ typographyTypes.small } Tag="span" color="rgba(18, 18, 18, 0.6)">
+                    Availability: <Typography type={typographyTypes.bodyBold} Tag="span">In Stock</Typography>
+                  </Typography>
+                </Info>
+              </InfoWrapper>
             </TitleProduct>
             :
             <Title>

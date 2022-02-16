@@ -1,7 +1,8 @@
 import Header from '../../components/molecules/Header/Header';
 import Footer from '../../components/molecules/Footer/Footer';
-import CatalogWomen from '../../pageComponents/women/CatalogWomen/CatalogWomen';
 import Path from '../../components/atoms/Path/Path';
+import BD from '../../BD';
+import CatalogFiltered from '../../components/molecules/CatalogFiltered/CatalogFiltered';
 
 const Women = () => {
   return (
@@ -9,7 +10,7 @@ const Women = () => {
       <Header/>
       <main>
         <Path link='Women'/>
-        <CatalogWomen/>
+        <CatalogFiltered section={ BD.women } link='Women'/>
       </main>
       <Footer/>
     </>
