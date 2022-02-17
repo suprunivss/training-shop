@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { createGlobalStyle } from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 const Global = createGlobalStyle`
   * {
@@ -18,11 +18,10 @@ const Global = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Global/>
-      <App/>
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+  <HashRouter>
+    <Global/>
+    <App/>
+  </HashRouter>,
+document.getElementById('root'),
+)
+;
