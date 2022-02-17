@@ -24,14 +24,14 @@ const Path = ({ link, title }) => {
                 ?
                 <>
                   <ArrowInactive/>
-                  <StyledLinkInactive to={ `/${ link }` }>{ link }</StyledLinkInactive>
+                  <StyledLinkInactive to={ `/${ link.toLowerCase() }` }>{ link }</StyledLinkInactive>
                   <Arrow/>
-                  <StyledLink to={ `/${ link }/${ title }` }>{ title }</StyledLink>
+                  <StyledLink to={ `/${ link.toLowerCase() }/${ title }` }>{ title }</StyledLink>
                 </>
                 :
                 <>
                   <Arrow/>
-                  <StyledLink to={ `/${ link }` }>{ link }</StyledLink>
+                  <StyledLink to={ `/${ link.toLowerCase() }` }>{ link }</StyledLink>
                 </>
               }
             </PagesPath>

@@ -12,10 +12,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="*" element={<Home/>} />
-        <Route path="/Men" element={<Men/>} />
-        <Route path="/Women" element={<Women/>} />
-        <Route path="/Men/:id" element={<Product link='Men'/>} />
-        <Route path="/Women/:id" element={<Product link='Women'/>} />
+        <Route path="/men" element={<Men/>} />
+        <Route path="/women" element={<Women/>} />
+        <Route path="/men/:id" element={<Product link='men'/>} />
+        <Route path="/women/:id" element={<Product link='women'/>} />
       </Routes>
 
     </div>
