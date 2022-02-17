@@ -26,7 +26,7 @@ import Reviews from './Reviews/Reviews';
 const ProductPage = ({ link }) => {
   return (
     <Container>
-      <Wrapper data-test-id={ `products-page-${ link.toLowerCase() }` }>
+      <Wrapper data-test-id={ `product-page-${ link.toLowerCase() }` }>
         <SliderWrapper>
           <SliderPreview>
             <ButtonPreview>
