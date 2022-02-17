@@ -19,6 +19,9 @@ export const ContentPath = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 24px;
+
+  @media(max-width: 720px) {
+    display: none;
 `;
 
 export const Title = styled.div`

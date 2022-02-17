@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -24,6 +25,6 @@ export const Item = styled.li`
   list-style: none;
 `;
 
-export const Link = styled.a`
+export const NavLink = styled(Link)`
   text-decoration: none;
 `;

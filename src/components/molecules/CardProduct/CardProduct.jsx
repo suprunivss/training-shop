@@ -25,8 +25,8 @@ import scale from '../../../assets/svg/scale.svg';
 const CardProduct = ({ price, image, text, rating, sale, link, id }) => {
   return (
     <CardWrapper>
-      <Image to={`/${ link }/${id}`}>
-        <img src={ image } alt={image}/>
+      <Image to={ `/${ link }/${ id }` } data-test-id={ `clothes-card-${ link.toLowerCase() }` }>
+        <img src={ image } alt={ image }/>
         { sale
           ? <Sale>
             <Typography type={ typographyTypes.bodyBold } Tag="span" color="#ffffff">
@@ -86,8 +86,8 @@ const CardProduct = ({ price, image, text, rating, sale, link, id }) => {
             </SizeButton>
           </Size>
           <ButtonsWrapper>
-            <ButtonDark width='145px' height='40px'>
-              <Typography type={typographyTypes.button} Tag='span' color='#ffffff'>
+            <ButtonDark width="145px" height="40px">
+              <Typography type={ typographyTypes.button } Tag="span" color="#ffffff">
                 ADD TO CART
               </Typography>
             </ButtonDark>

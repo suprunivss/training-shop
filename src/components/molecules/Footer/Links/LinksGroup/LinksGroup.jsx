@@ -1,4 +1,4 @@
-import { Item, Link, List, Title, Wrapper } from './styles';
+import { Item, NavLink, List, Title, Wrapper } from './styles';
 import Typography from '../../../../atoms/Typography/Typography';
 import { typographyTypes } from '../../../../atoms/Typography/constants';
 
@@ -10,15 +10,13 @@ const LinksGroup = ({ title, link }) => {
       </Title>
       <List>
         { link?.map((item, index) => {
-          const items = item.replace(/[^a-zа-яё]/gi, '');
-
           return (
             <Item key={ index }>
-              <Link href={ items } data-test-id={`footer-nav-link-${items}`}>
+              <NavLink to={ `/${item}` } data-test-id={`footer-nav-link-${item}`}>
                 <Typography type={typographyTypes.body} Tag='span' color='rgba(18, 18, 18, 0.7)'>
                   { item }
                 </Typography>
-              </Link>
+              </NavLink>
             </Item>
           );
         }) }

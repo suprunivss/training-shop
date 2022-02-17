@@ -5,22 +5,24 @@ import Filter from './Filter/Filter';
 
 const CatalogFiltered = ({ section, link }) => {
   return (
-    <Container>
-      <Filter/>
-      <CatalogItems>
-        { section.map(item => {
-          return (
-            <CardProduct price={ item.price } image={ item.image } text={ item.text } rating={ item.rating }
-                         sale={ item.sale } key={ item.id } id={ item.id } link={ link }/>
-          );
-        }) }
-      </CatalogItems>
-      <Loading>
-        <LoadingButton>
-          <Square/>
-        </LoadingButton>
-      </Loading>
-    </Container>
+    <div data-test-id={`product-page-${link.toLowerCase()}`}>
+      <Container>
+        <Filter/>
+        <CatalogItems>
+          { section.map(item => {
+            return (
+              <CardProduct price={ item.price } image={ item.image } text={ item.text } rating={ item.rating }
+                           sale={ item.sale } key={ item.id } id={ item.id } link={ link }/>
+            );
+          }) }
+        </CatalogItems>
+        <Loading>
+          <LoadingButton>
+            <Square/>
+          </LoadingButton>
+        </Loading>
+      </Container>
+    </div>
   );
 };
 
