@@ -12,7 +12,7 @@ const LinksGroup = ({ title, link }) => {
         { link?.map((item, index) => {
           return (
             <Item key={ index }>
-              <NavLink to={ `/${ item }` } data-test-id={ `footer-nav-link-${ item.toLowerCase() }` }>
+              <NavLink to={ `/${ item.toLowerCase() }` } data-test-id={ `footer-nav-link-${ item.toLowerCase() }` }>
                 <Typography type={ typographyTypes.body } Tag="span" color="rgba(18, 18, 18, 0.7)">
                   { item }
                 </Typography>
