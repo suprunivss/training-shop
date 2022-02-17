@@ -28,7 +28,7 @@ const Navigation = () => {
           <NavigationList>
             { links.map((item, index) => (
               <NavigationItem key={ index }>
-                <NavigationLink to={`/${item}`} data-test-id={`menu-link-${item}`}>{ item }</NavigationLink>
+                <NavigationLink to={`/${item}`} data-test-id={`menu-link-${item.toLowerCase()}`}>{ item }</NavigationLink>
               </NavigationItem>
             )) }
           </NavigationList>
