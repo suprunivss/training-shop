@@ -10,7 +10,7 @@ const Men = () => {
       <Header/>
       <main>
         <Path link='Men'/>
-        <CatalogFiltered section={ BD.men } link='Men'/>
+        <CatalogFiltered section={ BD.men } link='men'/>
       </main>
       <Footer/>
     </>

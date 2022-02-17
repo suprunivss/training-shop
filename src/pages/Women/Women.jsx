@@ -10,7 +10,7 @@ const Women = () => {
       <Header/>
       <main>
         <Path link='Women'/>
-        <CatalogFiltered section={ BD.women } link='Women'/>
+        <CatalogFiltered section={ BD.women } link='women'/>
       </main>
       <Footer/>
     </>
