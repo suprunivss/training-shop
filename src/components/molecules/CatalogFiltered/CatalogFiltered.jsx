@@ -5,7 +5,7 @@ import Filter from './Filter/Filter';
 
 const CatalogFiltered = ({ section, link }) => {
   return (
-    <div data-test-id={`product-page-${link.toLowerCase()}`}>
+    <div data-test-id={`products-page-${link.toLowerCase()}`}>
       <Container>
         <Filter/>
         <CatalogItems>
