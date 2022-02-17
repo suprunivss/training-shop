@@ -54,7 +54,7 @@ const Related = () => {
         {
           related.map(item => {
             return (
-              <CardProduct link='Women' id={ item.id } key={ item.id } image={ item.image } price={ item.price }
+              <CardProduct link='women' id={ item.id } key={ item.id } image={ item.image } price={ item.price }
                            rating={ item.rating } sale={item.sale} text={item.text}/>
             );
           })
