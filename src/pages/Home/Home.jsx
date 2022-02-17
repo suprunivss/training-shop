@@ -15,8 +15,8 @@ const Home = () => {
       <main>
         <Preview/>
         <Divider/>
-        <Catalog section={ BD.women } link='Women' title="WOMEN'S"/>
-        <Catalog section={ BD.men } link='Men' title="MEN'S"/>
+        <Catalog section={ BD.women } link='women' title="WOMEN'S"/>
+        <Catalog section={ BD.men } link='men' title="MEN'S"/>
         <Offer/>
         <Subscribe/>
         <Blog/>

@@ -13,7 +13,7 @@ import { typographyTypes } from '../../../components/atoms/Typography/constants'
 
 const Catalog = ({ section, title, link }) => {
   return (
-    <CatalogWrapper>
+    <CatalogWrapper data-test-id={`clothes-${link}`}>
       <Container>
         <CatalogTitle>
           <Typography type={ typographyTypes.title_22 } Tag="span">{ title }</Typography>
