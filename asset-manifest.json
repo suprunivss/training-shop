@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/training-shop/static/css/main.d33dd536.css",
-    "main.js": "/training-shop/static/js/main.2f47cb5d.js",
+    "main.js": "/training-shop/static/js/main.73c314ce.js",
     "static/media/subscribe1.png": "/training-shop/static/media/subscribe1.39b0be2ab3100b7ae831.png",
     "static/media/blog1.png": "/training-shop/static/media/blog1.9e337f082480f363a83b.png",
     "static/media/sliderMain.jpg": "/training-shop/static/media/sliderMain.9ac01342d65ee17fa08d.jpg",
@@ -56,9 +56,9 @@
     "static/media/heart.svg": "/training-shop/static/media/heart.22f0188b7608ec41c52368417b5ba254.svg",
     "static/media/refresh.svg": "/training-shop/static/media/refresh.fe286418db1e44a64c80e5b45e675c6b.svg",
     "static/media/clock.svg": "/training-shop/static/media/clock.6510bd68f7e12732c4a5382282ef83d9.svg",
+    "index.html": "/training-shop/index.html",
     "static/media/search.svg": "/training-shop/static/media/search.73fc87c1341e304be2b051c47b7000f1.svg",
     "static/media/clock-black.svg": "/training-shop/static/media/clock-black.bb7c1be7cac349c8db7b384f70cc0a78.svg",
-    "index.html": "/training-shop/index.html",
     "static/media/user.svg": "/training-shop/static/media/user.4445057d31fe55852f08d42a69a33c3e.svg",
     "static/media/facebook.svg": "/training-shop/static/media/facebook.96f507c07506447aaecdbff59d748d15.svg",
     "static/media/mail.svg": "/training-shop/static/media/mail.c9f4f2492184cff17a4a051f59484ac1.svg",
@@ -66,10 +66,10 @@
     "static/media/shopping-bag.svg": "/training-shop/static/media/shopping-bag.cb1b25c9e34daf9f49be0c84d5e14542.svg",
     "static/media/viewlist.svg": "/training-shop/static/media/viewlist.44db9bee8523b700cc8144da2caaed0d.svg",
     "main.d33dd536.css.map": "/training-shop/static/css/main.d33dd536.css.map",
-    "main.2f47cb5d.js.map": "/training-shop/static/js/main.2f47cb5d.js.map"
+    "main.73c314ce.js.map": "/training-shop/static/js/main.73c314ce.js.map"
   },
   "entrypoints": [
     "static/css/main.d33dd536.css",
-    "static/js/main.2f47cb5d.js"
+    "static/js/main.73c314ce.js"
   ]
 }
