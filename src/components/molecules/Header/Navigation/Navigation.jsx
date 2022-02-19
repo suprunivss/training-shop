@@ -23,31 +23,31 @@ const Navigation = () => {
   return (
     <Container>
       <Wrapper>
-        <Logo to="/" data-test-id="header-logo-link">
+        <Burger/>
+        <Logo to='/' data-test-id='header-logo-link'>
           CleverShop
         </Logo>
-        <nav data-test-id="menu">
+        <nav data-test-id='menu'>
           <NavigationList>
             { links.map((item, index) => (
               <NavigationItem key={ index }>
-                <NavigationLink to={ `/${ item.toLowerCase() }` }
-                                data-test-id={ `menu-link-${ item.toLowerCase() }` }>{ item }</NavigationLink>
+                <NavigationLink to={`/${item.toLowerCase()}`} data-test-id={`menu-link-${item.toLowerCase()}`}>{ item }</NavigationLink>
               </NavigationItem>
             )) }
           </NavigationList>
         </nav>
         <ButtonGroup>
           <ButtonWithIcon>
-            <img src={ search } alt="search icon"/>
+            <img src={ search } alt='search icon'/>
           </ButtonWithIcon>
           <ButtonWithIcon>
-            <img src={ globe } alt="globe icon"/>
+            <img src={ globe } alt='globe icon'/>
           </ButtonWithIcon>
           <ButtonWithIcon>
-            <img src={ user } alt="user icon"/>
+            <img src={ user } alt='user icon'/>
           </ButtonWithIcon>
           <ButtonWithIcon>
-            <img src={ shopping } alt="shopping icon"/>
+            <img src={ shopping } alt='shopping icon'/>
             <ShoppingCart>2</ShoppingCart>
           </ButtonWithIcon>
           <ButtonWithIconBurger onClick={ () => setBurgerEnabled(!burgerEnabled) }>
