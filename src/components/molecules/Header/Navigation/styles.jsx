@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
 `;
 
 export const NavigationList = styled.ul`
@@ -16,42 +16,10 @@ export const NavigationList = styled.ul`
   gap: 25px;
   text-decoration: none;
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `;
-
-export const Burger = styled.span`
-  display: none;
-
-  @media (max-width: 992px) {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 2px;
-    background-color: #121212;
-    
-    
-    
-    ::before {
-      position: absolute;
-      content: '';
-      width: 30px;
-      height: 2px;
-      background-color: #121212;
-      top: 10px;
-    }
-
-    ::after {
-      position: absolute;
-      content: '';
-      width: 30px;
-      height: 2px;
-      background-color: #121212;
-      top: -10px;
-    }
-  }
-`
 
 export const NavigationItem = styled.li`
   list-style: none;
@@ -75,10 +43,6 @@ export const Logo = styled(Link)`
   line-height: 32px;
   color: #121212;
   text-decoration: none;
-
-  @media(max-width: 1200px) {
-    display: none;
-  }
 `;
 
 export const ButtonGroup = styled.div`
@@ -97,6 +61,81 @@ export const ButtonWithIcon = styled.button`
   :hover {
     transform: scale(1.2);
     cursor: pointer;
+  }
+`;
+
+export const Burger = styled.span`
+  display: none;
+
+  @media (max-width: 1200px) {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 1px;
+    background-color: #121212;
+    transition: 500ms;
+
+    ::before {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 1px;
+      background-color: #121212;
+      top: 6px;
+      left: 0;
+    }
+
+    ::after {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 1px;
+      background-color: #121212;
+      top: -6px;
+      left: 0;
+    }
+  }
+  
+  &.active {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 1px;
+    background-color: #121212;
+    transition: 500ms;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+
+    ::before {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 1px;
+      background-color: #121212;
+      transform: rotate(-90deg);
+      top: 0;
+      left: 0;
+    }
+    
+    ::after {
+      display: none;
+    }
+  }
+`;
+
+
+export const ButtonWithIconBurger = styled.button`
+  width: 20px;
+  height: 20px;
+  display: none;
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    display: block;
   }
 `;
 
