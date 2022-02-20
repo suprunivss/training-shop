@@ -6,7 +6,12 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  
+`;
 
+export const Menu = styled.nav`
+  position: relative;
 `;
 
 export const NavigationList = styled.ul`
@@ -17,7 +22,20 @@ export const NavigationList = styled.ul`
   text-decoration: none;
 
   @media (max-width: 1200px) {
-    display: none;
+    position: fixed;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 80px;
+    z-index: 2;
+    gap: 65px;
+    top: 63px;
+    left: -100%;
+    transition: 500ms;
+    border: 1px solid rgba(18, 18, 18, 0.1);
+
+    &.activeList {
+      left: 0;
+    }
   }
 `;
 
@@ -43,6 +61,10 @@ export const Logo = styled(Link)`
   line-height: 32px;
   color: #121212;
   text-decoration: none;
+
+  @media (max-width: 720px) {
+    font-size: 20px;
+  }
 `;
 
 export const ButtonGroup = styled.div`
@@ -95,7 +117,7 @@ export const Burger = styled.span`
       left: 0;
     }
   }
-  
+
   &.active {
     display: block;
     position: relative;
@@ -117,22 +139,22 @@ export const Burger = styled.span`
       top: 0;
       left: 0;
     }
-    
+
     ::after {
       display: none;
     }
   }
 `;
 
-
 export const ButtonWithIconBurger = styled.button`
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: none;
   background: none;
   border: none;
   position: relative;
   cursor: pointer;
+  z-index: 2;
 
   @media (max-width: 1200px) {
     display: block;
@@ -156,4 +178,23 @@ export const ShoppingCart = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const BurgerBackground = styled.div`
+
+  @media (max-width: 1200px) {
+    opacity: 0;
+    transition: 500ms;
+
+    &.backgroundActive {
+      z-index: 1;
+      position: fixed;
+      top: -20px;
+      left: 0;
+      width: 100vw;
+      height: 110vh;
+      background-color: rgba(255, 255, 255, 0.9);
+      opacity: 1;
+    }
+  }
 `;

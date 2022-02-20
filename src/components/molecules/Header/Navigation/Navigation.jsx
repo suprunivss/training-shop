@@ -7,7 +7,7 @@ import {
   NavigationLink,
   NavigationItem,
   NavigationList,
-  ShoppingCart, Burger, ButtonWithIconBurger,
+  ShoppingCart, Burger, ButtonWithIconBurger, BurgerBackground, Menu,
 } from './styles';
 import search from '../../../../assets/svg/search.svg';
 import globe from '../../../../assets/svg/globe.svg';
@@ -23,35 +23,44 @@ const Navigation = () => {
   return (
     <Container>
       <Wrapper>
-        <Burger/>
-        <Logo to='/' data-test-id='header-logo-link'>
+        <Logo to="/" data-test-id="header-logo-link">
           CleverShop
         </Logo>
-        <nav data-test-id='menu'>
-          <NavigationList>
+        <BurgerBackground className={ burgerEnabled ? 'backgroundActive' : '' } onClick={ () => {
+          setBurgerEnabled(!burgerEnabled);
+        } }/>
+        <Menu data-test-id="menu">
+          <NavigationList className={ burgerEnabled ? 'activeList' : '' }>
             { links.map((item, index) => (
               <NavigationItem key={ index }>
-                <NavigationLink to={`/${item.toLowerCase()}`} data-test-id={`menu-link-${item.toLowerCase()}`}>{ item }</NavigationLink>
+                <NavigationLink to={ `/${ item.toLowerCase() }` }
+                                data-test-id={ `menu-link-${ item.toLowerCase() }` }>{ item }</NavigationLink>
               </NavigationItem>
             )) }
           </NavigationList>
-        </nav>
+        </Menu>
         <ButtonGroup>
           <ButtonWithIcon>
-            <img src={ search } alt='search icon'/>
+            <img src={ search } alt="search icon"/>
           </ButtonWithIcon>
           <ButtonWithIcon>
-            <img src={ globe } alt='globe icon'/>
+            <img src={ globe } alt="globe icon"/>
           </ButtonWithIcon>
           <ButtonWithIcon>
-            <img src={ user } alt='user icon'/>
+            <img src={ user } alt="user icon"/>
           </ButtonWithIcon>
           <ButtonWithIcon>
-            <img src={ shopping } alt='shopping icon'/>
+            <img src={ shopping } alt="shopping icon"/>
             <ShoppingCart>2</ShoppingCart>
           </ButtonWithIcon>
-          <ButtonWithIconBurger onClick={ () => setBurgerEnabled(!burgerEnabled) }>
-            <Burger className={burgerEnabled? 'active' : ''} />
+          <ButtonWithIconBurger onClick={ () => {
+            setBurgerEnabled(!burgerEnabled);
+            burgerEnabled
+              ? document.body.style.overflow = 'visible'
+              : document.body.style.overflow = 'hidden'
+          }
+          }>
+            <Burger className={ burgerEnabled ? 'active' : '' }/>
           </ButtonWithIconBurger>
         </ButtonGroup>
       </Wrapper>
