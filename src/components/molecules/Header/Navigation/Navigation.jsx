@@ -26,15 +26,25 @@ const Navigation = () => {
         <Logo to="/" data-test-id="header-logo-link">
           CleverShop
         </Logo>
-        <BurgerBackground className={ burgerEnabled ? 'backgroundActive' : '' } onClick={ () => {
-          setBurgerEnabled(!burgerEnabled);
-        } }/>
+        <BurgerBackground
+          className={ burgerEnabled ? 'backgroundActive' : '' }
+          onClick={ () => {
+            setBurgerEnabled(!burgerEnabled);
+            burgerEnabled
+              ? document.body.style.overflow = 'visible'
+              : document.body.style.overflow = 'hidden';
+          } }
+        />
         <Menu data-test-id="menu">
           <NavigationList className={ burgerEnabled ? 'activeList' : '' }>
             { links.map((item, index) => (
               <NavigationItem key={ index }>
-                <NavigationLink to={ `/${ item.toLowerCase() }` }
-                                data-test-id={ `menu-link-${ item.toLowerCase() }` }>{ item }</NavigationLink>
+                <NavigationLink
+                  to={ `/${ item.toLowerCase() }` }
+                  data-test-id={ `menu-link-${ item.toLowerCase() }` }
+                >
+                  { item }
+                </NavigationLink>
               </NavigationItem>
             )) }
           </NavigationList>
@@ -57,7 +67,7 @@ const Navigation = () => {
             setBurgerEnabled(!burgerEnabled);
             burgerEnabled
               ? document.body.style.overflow = 'visible'
-              : document.body.style.overflow = 'hidden'
+              : document.body.style.overflow = 'hidden';
           }
           }>
             <Burger className={ burgerEnabled ? 'active' : '' }/>
