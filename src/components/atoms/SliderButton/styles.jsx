@@ -26,8 +26,25 @@ export const ButtonStyled = styled.button`
     }
   }
   };
+  
+  :disabled {
+    :hover {
+      cursor: default ;
+      background-color: #ffffff;
+      border-radius: 50%;
+    }
+    
+    ::before {
+      background-color: rgba(18, 18, 18, 0.2);
+    }
+    
+    ::after {
+      background-color: rgba(18, 18, 18, 0.2);
+    }
+  }
+}
 
-  &:hover {
+  :hover {
     cursor: pointer;
     background-color: rgba(230, 230, 230, 0.6);
     border-radius: 50%;
