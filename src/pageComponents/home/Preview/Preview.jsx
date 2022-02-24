@@ -10,8 +10,11 @@ import {
   PreviewContainerLarge,
   SliderStyle,
   SliderWrapper,
-  Wrapper, WrapperInfo, PreviewSection,
+  Wrapper, WrapperInfo, PreviewSection, SliderButtonLeft, SliderButtonRight, SliderItemWrapper,
 } from './styles';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 import refresh from '../../../assets/svg/refresh.svg';
 import support from '../../../assets/svg/support.svg';
@@ -19,19 +22,62 @@ import truck from '../../../assets/svg/truck.svg';
 import woman from '../../../assets/img/womensPreview.jpg';
 import man from '../../../assets/img/mensPreview.jpg';
 import accessories from '../../../assets/img/acessories.jpg';
+import { useState } from 'react';
 
 const Preview = () => {
+  const [sliderStart, setSliderStart] = useState(true);
+  const [sliderEnd, setSliderEnd] = useState(false);
+
   return (
     <PreviewSection>
       <Container>
         <Wrapper>
           <SliderWrapper>
-            <SliderButton type="left"/>
-            <SliderStyle>
-              <Typography type={ typographyTypes.subtitle } Tag="span" color="#a0a0a0">BANNER</Typography>
-              <Typography type={ typographyTypes.title_22 } Tag="span">YOUR TITLE TEXT</Typography>
-            </SliderStyle>
-            <SliderButton type="right"/>
+            <Swiper style={{zIndex: '0'}} onSlideChange={ (swiper) => {
+              if (swiper.isBeginning) {
+                setSliderStart(true);
+                setSliderEnd(false);
+                return;
+              }
+              if (swiper.isEnd) {
+                setSliderEnd(true);
+                setSliderStart(false);
+                return;
+              }
+              setSliderStart(false);
+              setSliderEnd(false);
+            } }>
+              <SwiperSlide style={ { display: 'flex', alignItems: 'center', justifyContent: 'center' } }>
+                <SliderItemWrapper>
+                  <SliderStyle>
+                    <Typography type={ typographyTypes.subtitle } Tag="span" color="#a0a0a0">BANNER</Typography>
+                    <Typography type={ typographyTypes.title_22 } Tag="span">YOUR TITLE TEXT</Typography>
+                  </SliderStyle>
+                </SliderItemWrapper>
+              </SwiperSlide>
+              <SwiperSlide style={ { display: 'flex', alignItems: 'center', justifyContent: 'center' } }>
+                <SliderItemWrapper>
+                  <SliderStyle>
+                    <Typography type={ typographyTypes.subtitle } Tag="span" color="#a0a0a0">BANNER</Typography>
+                    <Typography type={ typographyTypes.title_22 } Tag="span">YOUR TITLE TEXT</Typography>
+                  </SliderStyle>
+                </SliderItemWrapper>
+              </SwiperSlide>
+              <SwiperSlide style={ { display: 'flex', alignItems: 'center', justifyContent: 'center' } }>
+                <SliderItemWrapper>
+                  <SliderStyle>
+                    <Typography type={ typographyTypes.subtitle } Tag="span" color="#a0a0a0">BANNER</Typography>
+                    <Typography type={ typographyTypes.title_22 } Tag="span">YOUR TITLE TEXT</Typography>
+                  </SliderStyle>
+                </SliderItemWrapper>
+              </SwiperSlide>
+              <SliderButtonLeft>
+                <SliderButton disabled={ sliderStart } type="left"/>
+              </SliderButtonLeft>
+              <SliderButtonRight>
+                <SliderButton disabled={ sliderEnd } type="right"/>
+              </SliderButtonRight>
+            </Swiper>
           </SliderWrapper>
           <PreviewWrapper>
             <PreviewContainer>

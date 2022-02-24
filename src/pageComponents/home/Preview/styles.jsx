@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import menuSliderImage from '../../../assets/img/sliderMain.jpg';
+import slider from '../../../assets/img/sliderMain.jpg';
+import { SwiperSlide } from 'swiper/react';
 
 export const PreviewSection = styled.section`
   margin-top: 32px;
@@ -22,18 +23,44 @@ export const Wrapper = styled.div`
 `;
 
 export const SliderWrapper = styled.article`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
   width: 540px;
   height: 490px;
-  background-image: url(${ menuSliderImage });
-  background-size: cover;
+  text-align: center;
+  position: relative;
 
   @media (max-width: 1200px) {
     width: 100%;
   }
+`;
+
+export const SliderButtonLeft = styled.div`
+  position: absolute;
+  top: 45%;
+  left: 15px;
+  z-index: 1;
+`;
+
+export const SliderItemWrapper = styled(SwiperSlide)`
+  background-image: url(${ slider });
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 490px;
+  width: 540px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+`;
+
+export const SliderButtonRight = styled.div`
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  z-index: 1;
 `;
 
 export const SliderStyle = styled.div`
