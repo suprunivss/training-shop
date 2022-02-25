@@ -1,5 +1,5 @@
-import Typography from '../../../atoms/Typography/Typography';
-import { typographyTypes } from '../../../atoms/Typography/constants';
+import Typography from '../../../../components/atoms/Typography/Typography';
+import { typographyTypes } from '../../../../components/atoms/Typography/constants';
 import blue from '../../../../assets/img/blue64.png';
 import white from '../../../../assets/img/white64.png';
 import black from '../../../../assets/img/black64.png';

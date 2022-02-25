@@ -1,6 +1,6 @@
 import { Description, Title, TitleWrapper, Wrapper } from './styles';
-import Typography from '../../../atoms/Typography/Typography';
-import { typographyTypes } from '../../../atoms/Typography/constants';
+import Typography from '../../../../components/atoms/Typography/Typography';
+import { typographyTypes } from '../../../../components/atoms/Typography/constants';
 
 const Additional = () => {
   return (

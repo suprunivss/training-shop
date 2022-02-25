@@ -1,6 +1,6 @@
-import Typography from '../../../atoms/Typography/Typography';
-import { typographyTypes } from '../../../atoms/Typography/constants';
-import ButtonDark from '../../../atoms/ButtonDark/ButtonDark';
+import Typography from '../../../../components/atoms/Typography/Typography';
+import { typographyTypes } from '../../../../components/atoms/Typography/constants';
+import ButtonDark from '../../../../components/atoms/ButtonDark/ButtonDark';
 import heart from '../../../../assets/svg/heart.svg';
 import scale from '../../../../assets/svg/scale.svg';
 import { ButtonContainer, ButtonsWrapper, PriceText, Wrapper } from './styles';

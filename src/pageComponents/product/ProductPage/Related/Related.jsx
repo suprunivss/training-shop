@@ -1,12 +1,12 @@
 import { Buttons, ProductWrapper, TitleWrapper, Wrapper } from './styled';
-import Typography from '../../../atoms/Typography/Typography';
-import { typographyTypes } from '../../../atoms/Typography/constants';
-import SliderButton from '../../../atoms/SliderButton/SliderButton';
+import Typography from '../../../../components/atoms/Typography/Typography';
+import { typographyTypes } from '../../../../components/atoms/Typography/constants';
+import SliderButton from '../../../../components/atoms/SliderButton/SliderButton';
 import related1 from '../../../../assets/img/related1.png';
 import related2 from '../../../../assets/img/related2.png';
 import related3 from '../../../../assets/img/related3.png';
 import related4 from '../../../../assets/img/related4.png';
-import CardProduct from '../../CardProduct/CardProduct';
+import CardProduct from '../../../../components/molecules/CardProduct/CardProduct';
 
 const Related = () => {
   const related = [{

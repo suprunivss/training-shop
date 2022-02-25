@@ -1,7 +1,7 @@
 import { Rating, RatingWrapper, ReviewButton, ReviewTitle, Comments, Wrapper, ReviewWrapper } from './styles';
-import Typography from '../../../atoms/Typography/Typography';
-import { typographyTypes } from '../../../atoms/Typography/constants';
-import RatingStars from '../../../atoms/RatingStars/RatingStars';
+import Typography from '../../../../components/atoms/Typography/Typography';
+import { typographyTypes } from '../../../../components/atoms/Typography/constants';
+import RatingStars from '../../../../components/atoms/RatingStars/RatingStars';
 
 const Reviews = () => {
   return (

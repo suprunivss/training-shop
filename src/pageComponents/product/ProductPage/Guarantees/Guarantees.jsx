@@ -1,10 +1,10 @@
 import { Delivery, DeliveryWrapper, Title, TitleWrapper, Wrapper } from './styles';
-import Typography from '../../../atoms/Typography/Typography';
-import { typographyTypes } from '../../../atoms/Typography/constants';
+import Typography from '../../../../components/atoms/Typography/Typography';
+import { typographyTypes } from '../../../../components/atoms/Typography/constants';
 import truck from '../../../../assets/svg/truck.svg';
 import refresh from '../../../../assets/svg/refresh.svg';
 import mail from '../../../../assets/svg/mail.svg';
-import Divider from '../../../atoms/Divider/Divider';
+import Divider from '../../../../components/atoms/Divider/Divider';
 import safe from '../../../../assets/img/safe.png';
 
 const Guarantees = () => {

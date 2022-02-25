@@ -1,5 +1,5 @@
-import Typography from '../../../atoms/Typography/Typography';
-import { typographyTypes } from '../../../atoms/Typography/constants';
+import Typography from '../../../../components/atoms/Typography/Typography';
+import { typographyTypes } from '../../../../components/atoms/Typography/constants';
 import { Clothes, SizeButton, SizeButtonWrapper, Wrapper } from './styles';
 import clothes from '../../../../assets/svg/clothes.svg';
 
