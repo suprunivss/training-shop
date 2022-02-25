@@ -8,7 +8,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   height: 80vh;
   gap: 200px;
-`
+`;
 
 export const Logo = styled(Link)`
   font-family: 'Playfair Display SC', serif;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import slider from '../../../assets/img/sliderMain.jpg';
 import { SwiperSlide } from 'swiper/react';
 
 export const PreviewSection = styled.section`
@@ -41,7 +40,7 @@ export const SliderButtonLeft = styled.div`
 `;
 
 export const SliderItemWrapper = styled(SwiperSlide)`
-  background-image: url(${ slider });
+  background-image: url(${ props => props.image });
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -73,6 +72,7 @@ export const SliderStyle = styled.div`
   align-items: center;
   justify-content: center;
   gap: 14px;
+  cursor: default;
 `;
 
 export const PreviewContainer = styled.div`
