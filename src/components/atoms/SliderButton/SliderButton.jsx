@@ -11,6 +11,13 @@ const SliderButton = ({ type, disabled }) => {
       case 'left':
         swiper.slidePrev();
         return;
+      case 'bottom':
+        swiper.slideNext();
+        return;
+      case 'top':
+        swiper.slidePrev();
+        return;
+      default: swiper.slideNext();
     }
   };
 

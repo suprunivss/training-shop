@@ -8,6 +8,7 @@ export const ButtonStyled = styled.button`
   background-color: rgba(255, 255, 255, 0.6);
   border: none;
   transition: 500ms;
+  z-index: 3;
   transform: ${ props => {
     switch (props.type) {
       case 'left':

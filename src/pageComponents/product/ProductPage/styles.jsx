@@ -16,10 +16,26 @@ export const SliderWrapper = styled.div`
   display: flex;
   flex-grow: 1;
   gap: 16px;
+  width: 554px;
+  height: 560px;
   
   @media(max-width: 992px) {
     display: none;
   }
+`;
+
+export const SliderButtonLeft = styled.div`
+  position: absolute;
+  top: 45%;
+  left: 15px;
+  z-index: 1;
+`;
+
+export const SliderButtonRight = styled.div`
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  z-index: 1;
 `;
 
 export const SliderImage = styled.div`
