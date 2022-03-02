@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import slider from '../../../assets/img/sliderimage.png';
 
 export const Wrapper = styled.section`
   display: flex;
   margin-top: 32px;
   flex-direction: row;
 
-  @media(max-width: 1200px) {
-   flex-direction: column;
+  @media (max-width: 1200px) {
+    flex-direction: column;
     align-items: center;
   }
 `;
@@ -18,8 +17,8 @@ export const SliderWrapper = styled.div`
   gap: 16px;
   width: 554px;
   height: 560px;
-  
-  @media(max-width: 992px) {
+
+  @media (max-width: 992px) {
     display: none;
   }
 `;
@@ -38,15 +37,16 @@ export const SliderButtonRight = styled.div`
   z-index: 1;
 `;
 
-export const SliderImage = styled.div`
+export const SliderWrapperPreview = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 0 16px;
-  background-image: url(${ slider });
-  background-repeat: no-repeat;
-  width: 448px;
-  height: 560px;
+`;
+
+export const SliderWrapperButtons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
 `;
 
 export const Content = styled.div`
@@ -57,7 +57,7 @@ export const Content = styled.div`
   margin-left: 30px;
   gap: 32px;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     align-items: center;
   }
 `;

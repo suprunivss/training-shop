@@ -1,9 +1,4 @@
 import Container from '../../../components/atoms/Container/Container';
-import {
-  Content, SliderButtonLeft, SliderButtonRight,
-  SliderWrapper,
-  Wrapper,
-} from './styles';
 import SliderButton from '../../../components/atoms/SliderButton/SliderButton';
 import Divider from '../../../components/atoms/Divider/Divider';
 import Color from './Color/Color';
@@ -18,7 +13,13 @@ import Reviews from './Reviews/Reviews';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
 import { FreeMode, Navigation, Thumbs } from 'swiper';
+
 import slider from '../../../assets/img/sliderimage.png';
+import {
+  Content, SliderButtonLeft, SliderButtonRight,
+  SliderWrapper, SliderWrapperButtons, SliderWrapperPreview,
+  Wrapper,
+} from './styles';
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -28,54 +29,53 @@ const ProductPage = ({ link }) => {
   const [sliderStart, setSliderStart] = useState(true);
   const [sliderEnd, setSliderEnd] = useState(false);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const sliders = [slider, slider, slider, slider]
 
   return (
     <Container>
       <Wrapper data-test-id={ `product-page-${ link.toLowerCase() }` }>
         <SliderWrapper>
-          <div style={{zIndex: '1'}}>
-            <SliderButton className='sliderTop' disabled={ sliderStart } type="top"/>
-            <SliderButton className='sliderBottom' disabled={ sliderEnd } type="bottom"/>
-          </div>
-          <Swiper
-            onSwiper={ setThumbsSwiper }
-            slidesPerView={ 4 }
-            navigation={{
-              nextEl: '.sliderTop',
-              prevEl: '.sliderBottom'
-            }}
-            freeMode={ true }
-            watchSlidesProgress={ true }
-            modules={ [FreeMode, Navigation, Thumbs] }
-            direction={ 'vertical' }
-            onSlideChange={ (swiper) => {
-              if (swiper.isBeginning) {
-                setSliderStart(true);
-                setSliderEnd(false);
-                return;
-              }
-              if (swiper.isEnd) {
-                setSliderEnd(true);
+          <SliderWrapperPreview>
+            <SliderWrapperButtons>
+              <SliderButton className='sliderTop' disabled={ sliderStart } type="top"/>
+              <SliderButton className='sliderBottom' disabled={ sliderEnd } type="bottom"/>
+            </SliderWrapperButtons>
+            <Swiper
+              onSwiper={ setThumbsSwiper }
+              spaceBetween={ 16 }
+              slidesPerView={ 4 }
+              navigation={{
+                nextEl: '.sliderTop',
+                prevEl: '.sliderBottom',
+              }}
+              freeMode={ true }
+              watchSlidesProgress={ true }
+              modules={ [FreeMode, Thumbs] }
+              direction={ 'vertical' }
+              onSlideChange={ (swiper) => {
+                if (swiper.isBeginning) {
+                  setSliderStart(true);
+                  setSliderEnd(false);
+                  return;
+                }
+                if (swiper.isEnd) {
+                  setSliderEnd(true);
+                  setSliderStart(false);
+                  return;
+                }
                 setSliderStart(false);
-                return;
-              }
-              setSliderStart(false);
-              setSliderEnd(false);
-            } }
-          >
-            <SwiperSlide style={{width: '94px', height: '114px'}}>
-              <img style={{width: '94px', height: '114px'}} src={slider} alt="slider"/>
-            </SwiperSlide>
-            <SwiperSlide style={{width: '94px', height: '114px'}}>
-              <img style={{width: '94px', height: '114px'}} src={slider} alt="slider"/>
-            </SwiperSlide>
-            <SwiperSlide style={{width: '94px', height: '114px'}}>
-              <img style={{width: '94px', height: '114px'}} src={slider} alt="slider"/>
-            </SwiperSlide>
-            <SwiperSlide style={{width: '94px', height: '114px'}} src={slider}>
-              <img style={{width: '94px', height: '114px'}} src={slider} alt="slider"/>
-            </SwiperSlide>
-          </Swiper>
+                setSliderEnd(false);
+              } }
+            >
+              {sliders.map(item => {
+                return (
+                  <SwiperSlide style={{width: '94px', height: '114px'}}>
+                    <img style={{width: '94px', height: '114px'}} src={item} alt="slider"/>
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
+          </SliderWrapperPreview>
           <Swiper
             style={ {
               width: '448px'
