@@ -1,7 +1,7 @@
 import { ButtonStyled } from './styles';
 import { useSwiper } from 'swiper/react';
 
-const SliderButton = ({ type, disabled }) => {
+const SliderButton = ({ type, disabled, className }) => {
   const swiper = useSwiper();
   const onClick = () => {
     switch (type) {
@@ -21,7 +21,7 @@ const SliderButton = ({ type, disabled }) => {
     }
   };
 
-  return <ButtonStyled disabled={ disabled } onClick={ onClick } type={ type }/>;
+  return <ButtonStyled disabled={ disabled } onClick={ onClick } type={ type } className={className}/>;
 };
 
 export default SliderButton;

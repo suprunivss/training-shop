@@ -5,8 +5,10 @@ export const Wrapper = styled.section`
   flex-direction: column;
   margin: 104px 0 96px 0;
   gap: 40px;
+  position: relative;
+  overflow: hidden;
 
-  @media(max-width: 992px) {
+  @media(max-width: 1200px) {
     display: none;
   }
 `;
@@ -24,5 +26,9 @@ export const Buttons = styled.div`
 
 export const ProductWrapper = styled.div`
   display: flex;
-  gap: 30px;
+  gap: 16px;
+  position: absolute;
+  top: -70px;
+  right: 0;
+  
 `
