@@ -58,7 +58,7 @@ export const Content = styled.div`
   gap: 32px;
 
   @media (max-width: 1200px) {
-    align-items: center;
+    align-items: flex-start;
   }
 `;
 
@@ -66,10 +66,5 @@ export const SliderPreview = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-`;
-
-export const ButtonPreview = styled.div`
-  display: flex;
-  gap: 14px;
 `;
 
