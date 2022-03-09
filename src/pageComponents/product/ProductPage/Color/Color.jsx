@@ -18,9 +18,9 @@ const Color = () => {
         </Typography>
       </Typography>
       <ColorPreview>
-        { color.map(item => {
+        { color.map((item, index) => {
           return (
-            <ColorButton>
+            <ColorButton key={index}>
               <img src={ item } alt={ item }/>
             </ColorButton>
           );

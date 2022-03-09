@@ -67,9 +67,9 @@ const ProductPage = ({ link }) => {
                 setSliderEnd(false);
               } }
             >
-              {sliders.map(item => {
+              {sliders.map((item, index) => {
                 return (
-                  <SwiperSlide style={{width: '94px', height: '114px'}}>
+                  <SwiperSlide key={index} style={{width: '94px', height: '114px'}}>
                     <img style={{width: '94px', height: '114px'}} src={item} alt="slider"/>
                   </SwiperSlide>
                 )
