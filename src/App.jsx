@@ -6,10 +6,11 @@ import Men from './pages/Men/Men';
 import Women from './pages/Women/Women';
 import Product from './pages/Product/Product';
 import NotFound from './pages/NotFound/NotFound';
+import ScrollToTop from './components/atoms/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
-    <div data-test-id='app'>
+    <ScrollToTop data-test-id='app'>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="*" element={<NotFound/>} />
@@ -18,7 +19,7 @@ function App() {
         <Route path="/men/:id" element={<Product link='men'/>} />
         <Route path="/women/:id" element={<Product link='women'/>} />
       </Routes>
-    </div>
+    </ScrollToTop>
   );
 }
 
