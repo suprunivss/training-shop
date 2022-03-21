@@ -6,7 +6,7 @@ import { PreviewLink, Wrapper } from './styles';
 const PreviewCard = ({ children, img }) => {
   return (
     <Wrapper img={ img }>
-      <PreviewLink>
+      <PreviewLink to={`/${children}`}>
         <Typography type={ typographyTypes.title_16 } Tag="h2">
           { children }
         </Typography>

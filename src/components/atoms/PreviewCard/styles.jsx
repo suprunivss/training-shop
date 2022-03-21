@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.article.attrs(props => props.img)`
   width: 100%;
@@ -32,7 +33,7 @@ const toMinWidth = keyframes`
   }
 `;
 
-export const PreviewLink = styled.a`
+export const PreviewLink = styled(Link)`
   background: #ffffff;
   padding: 13px 24px;
   border-radius: 5px;
@@ -42,6 +43,7 @@ export const PreviewLink = styled.a`
   border: none;
   cursor: pointer;
   animation: ${ toMinWidth } 0.3s linear 1 forwards;
+  text-decoration: none;
 
   &:hover {
     border-radius: 0;

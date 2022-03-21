@@ -45,8 +45,8 @@ const Catalog = ({ section, title, link }) => {
             );
           }) }
         </CatalogItems>
-        <CatalogButton>
-          <Typography type={ typographyTypes.button } Tag="span" color="rgba(18, 18, 18, 0.8)">
+        <CatalogButton to={`/${link}`}>
+          <Typography type={ typographyTypes.button } Tag="span">
             SEE ALL
           </Typography>
         </CatalogButton>

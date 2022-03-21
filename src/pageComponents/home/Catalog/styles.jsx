@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const CatalogWrapper = styled.section`
   margin-top: 96px;
@@ -47,9 +48,13 @@ export const CatalogItems = styled.div`
   
 `;
 
-export const CatalogButton = styled.button`
+export const CatalogButton = styled(Link)`
   height: 48px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   background-color: #E6E6E6;
   border: none;
   cursor: pointer;
