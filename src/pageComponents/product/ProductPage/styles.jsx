@@ -18,6 +18,14 @@ export const SliderWrapper = styled.div`
   width: 554px;
   height: 560px;
 
+  .swiper-slide-visible {
+    opacity: 0.4;
+  }
+
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
   @media (max-width: 992px) {
     display: none;
   }

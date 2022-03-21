@@ -37,17 +37,13 @@ const ProductPage = ({ link }) => {
         <SliderWrapper>
           <SliderWrapperPreview>
             <SliderWrapperButtons>
-              <SliderButton className='sliderTop' disabled={ sliderStart } type="top"/>
-              <SliderButton className='sliderBottom' disabled={ sliderEnd } type="bottom"/>
+              <SliderButton className='sliderBottom' disabled={ sliderStart } type="top"/>
+              <SliderButton className='sliderTop' disabled={ sliderEnd } type="bottom"/>
             </SliderWrapperButtons>
             <Swiper
               onSwiper={ setThumbsSwiper }
               spaceBetween={ 16 }
               slidesPerView={ 4 }
-              navigation={{
-                nextEl: '.sliderTop',
-                prevEl: '.sliderBottom',
-              }}
               freeMode={ true }
               watchSlidesProgress={ true }
               modules={ [FreeMode, Thumbs] }
@@ -69,7 +65,7 @@ const ProductPage = ({ link }) => {
             >
               {sliders.map((item, index) => {
                 return (
-                  <SwiperSlide key={index} style={{width: '94px', height: '114px'}}>
+                  <SwiperSlide key={index} style={{width: '94px', height: '114px', cursor: 'pointer'}}>
                     <img style={{width: '94px', height: '114px'}} src={item} alt="slider"/>
                   </SwiperSlide>
                 )
@@ -83,6 +79,11 @@ const ProductPage = ({ link }) => {
             spaceBetween={ 10 }
             thumbs={ { swiper: thumbsSwiper } }
             modules={ [FreeMode, Navigation, Thumbs] }
+
+            navigation={{
+              nextEl: '.sliderTop',
+              prevEl: '.sliderBottom',
+            }}
             onSlideChange={ (swiper) => {
               if (swiper.isBeginning) {
                 setSliderStart(true);
