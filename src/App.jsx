@@ -1,7 +1,7 @@
 import 'normalize.css';
 
 import Home from './pages/Home/Home';
-import { Routes, Route } from 'react-router';
+import { Route, Routes } from 'react-router-dom';
 import Men from './pages/Men/Men';
 import Women from './pages/Women/Women';
 import Product from './pages/Product/Product';
@@ -10,16 +10,17 @@ import ScrollToTop from './components/atoms/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
-    <ScrollToTop data-test-id='app'>
+    <div data-test-id="app">
+      <ScrollToTop/>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="*" element={<NotFound/>} />
-        <Route path="/men" element={<Men/>} />
-        <Route path="/women" element={<Women/>} />
-        <Route path="/men/:id" element={<Product link='men'/>} />
-        <Route path="/women/:id" element={<Product link='women'/>} />
+        <Route path="/" element={ <Home/> }/>
+        <Route path="*" element={ <NotFound/> }/>
+        <Route path="/men" element={ <Men/> }/>
+        <Route path="/women" element={ <Women/> }/>
+        <Route path="/men/:id" element={ <Product link="Men"/> }/>
+        <Route path="/women/:id" element={ <Product link="Women"/> }/>
       </Routes>
-    </ScrollToTop>
+    </div>
   );
 }
 
