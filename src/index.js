@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { createGlobalStyle } from 'styled-components';
 import { HashRouter } from 'react-router-dom';
+import ScrollToTop from './components/atoms/ScrollToTop/ScrollToTop';
 
 const Global = createGlobalStyle`
   * {
@@ -19,6 +20,7 @@ const Global = createGlobalStyle`
 
 ReactDOM.render(
   <HashRouter>
+    <ScrollToTop/>
     <Global/>
     <App/>
   </HashRouter>,

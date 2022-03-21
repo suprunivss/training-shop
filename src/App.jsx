@@ -6,12 +6,10 @@ import Men from './pages/Men/Men';
 import Women from './pages/Women/Women';
 import Product from './pages/Product/Product';
 import NotFound from './pages/NotFound/NotFound';
-import ScrollToTop from './components/atoms/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <div data-test-id="app">
-      <ScrollToTop/>
       <Routes>
         <Route path="/" element={ <Home/> }/>
         <Route path="*" element={ <NotFound/> }/>
